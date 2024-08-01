@@ -1,11 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# # Practice Notebook - Putting It All Together
-
-# Hello, coders! Below we have code similar to what we wrote in the last video.  Go ahead and run the following cell that defines our `get_event_date`, `current_users` and `generate_report` methods.
-
-# In[ ]:
 
 
 def get_event_date(event):
@@ -32,8 +25,6 @@ def generate_report(machines):
 
 # No output should be generated from running the custom function definitions above.  To check that our code is doing everything it's supposed to do, we need an `Event` class.  The code in the next cell below initializes our `Event` class.  Go ahead and run this cell next.
 
-# In[ ]:
-
 
 class Event:
   def __init__(self, event_date, event_type, machine_name, user):
@@ -43,9 +34,7 @@ class Event:
     self.user = user
 
 
-# Ok, we have an `Event` class that has a constructor and sets the necessary attributes.  Next let's create some events and add them to a list by running the following cell.
 
-# In[ ]:
 
 
 events = [
@@ -66,17 +55,9 @@ events = [
 users = current_users(events)
 print(users)
 
-
-# Uh oh.  The code in the previous cell produces an error message.  This is because we have a user in our `events` list that was logged out of a machine he was not logged into. Do you see which user this is? Make edits to the first cell containing our custom function definitions to see if you can fix this error message. There may be more than one way to do so. 
-# <br><br>
-# Remember when you have finished making your edits, rerun that cell as well as the cell that feeds the `events` list into our `custom_users` function to see whether the error message has been fixed. Once the error message has been cleared and you have correctly outputted a dictionary with machine names as keys, your custom functions are properly finished.  Great!
-
 # Now try generating the report by running the next cell.
 
 # In[ ]:
 
 
 generate_report(users)
-
-
-# Whoop whoop! Success! The error message has been cleared and the desired output is produced. You are all done with this practice notebook. Way to go!
